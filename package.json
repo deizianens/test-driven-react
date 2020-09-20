@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . && prettier-eslint --list-different **/*.js",
+    "format": "prettier-eslint --write **/*.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,17 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.10.0",
     "eslint-plugin-jest": "^22.1.2",
-    "jest": "^23.6.0"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "prettier-eslint-cli": "^4.7.1",
+    "react-dom": "^16.4.2"
+  },
+  "dependencies": {
+    "react": "^16.4.2"
   }
 }
