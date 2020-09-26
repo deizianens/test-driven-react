@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CarouselSlide = (props) => (
-  <figure>
-    <img src={props.imgUrl} />
+const CarouselSlide = ({ imgUrl, description, attribution, ...rest }) => (
+  <figure {...rest}>
+    <img src={imgUrl} />
     <figcaption>
-      <strong>{props.description}</strong> {props.attribution}
+      <strong>{description}</strong> {attribution}
     </figcaption>
   </figure>
 );
