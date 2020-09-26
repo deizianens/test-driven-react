@@ -7,15 +7,15 @@ describe('CarouselButton', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<CarouselButton>{text}</CarouselButton>);
+    wrapper = shallow(<CarouselButton buttonText={text}></CarouselButton>);
   });
 
   it('renders a <button>', () => {
     expect(wrapper.type()).toBe('button');
   });
 
-  it('renders a button with children', () => {
-    expect(wrapper.prop('children')).toBe(text);
+  it('renders a button with text', () => {
+    expect(wrapper.prop('buttonText')).toBe(text);
   });
 
   it('passes other props through to the <button>', () => {
