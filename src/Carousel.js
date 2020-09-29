@@ -1,5 +1,6 @@
 import React from 'react';
 import CarouselButton from './CarouselButton';
+import CarouselSlide from './CarouselSlide';
 
 class Carousel extends React.PureComponent {
   state = {
@@ -15,8 +16,11 @@ class Carousel extends React.PureComponent {
   };
 
   render() {
+    const { slides, ...rest } = this.props;
+
     return (
-      <div>
+      <div {...rest}>
+        <CarouselSlide {...slides[this.state.slideIndex]} />
         <CarouselButton
           data-action='prev'
           onClick={this.handlePrevClick}
