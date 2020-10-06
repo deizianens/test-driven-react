@@ -42,7 +42,7 @@ describe('Carousel', () => {
       wrapper
         .find(CarouselButton)
         .at(0)
-        .prop('buttonText')
+        .prop('children')
     ).toBe('Prev');
   });
 
@@ -51,7 +51,7 @@ describe('Carousel', () => {
       wrapper
         .find(CarouselButton)
         .at(1)
-        .prop('buttonText')
+        .prop('children')
     ).toBe('Next');
   });
 

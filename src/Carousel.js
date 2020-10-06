@@ -34,16 +34,12 @@ class Carousel extends React.PureComponent {
     return (
       <div {...rest}>
         <CarouselSlide {...slides[this.state.slideIndex]} />
-        <CarouselButton
-          data-action='prev'
-          onClick={this.handlePrevClick}
-          buttonText='Prev'
-        />
-        <CarouselButton
-          data-action='next'
-          onClick={this.handleNextClick}
-          buttonText='Next'
-        />
+        <CarouselButton data-action='prev' onClick={this.handlePrevClick}>
+          Prev
+        </CarouselButton>
+        <CarouselButton data-action='next' onClick={this.handleNextClick}>
+          Next
+        </CarouselButton>
       </div>
     );
   }
